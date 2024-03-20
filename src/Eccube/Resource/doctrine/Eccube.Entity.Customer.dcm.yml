@@ -51,6 +51,9 @@ Eccube\Entity\Customer:
         company_name:
             type: text
             nullable: true
+        department:
+            type: text
+            nullable: true
         zip01:
             type: text
             nullable: true

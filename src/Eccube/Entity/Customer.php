@@ -68,6 +68,11 @@ class Customer extends \Eccube\Entity\AbstractEntity implements UserInterface, \
     /**
      * @var string
      */
+    private $department;
+
+    /**
+     * @var string
+     */
     private $zip01;
 
     /**
@@ -412,6 +417,29 @@ class Customer extends \Eccube\Entity\AbstractEntity implements UserInterface, \
     public function getCompanyName()
     {
         return $this->company_name;
+    }
+
+    /**
+     * Set department
+     *
+     * @param  string   $department
+     * @return Customer
+     */
+    public function setDepartment($department)
+    {
+        $this->department = $department;
+
+        return $this;
+    }
+
+    /**
+     * Get department
+     *
+     * @return string
+     */
+    public function getDepartment()
+    {
+        return $this->department;
     }
 
     /**

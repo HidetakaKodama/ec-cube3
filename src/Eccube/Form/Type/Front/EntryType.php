@@ -59,6 +59,15 @@ class EntryType extends AbstractType
                     )),
                 ),
             ))
+            ->add('department', 'text', array(
+                'label' => '部署名',
+                'required' => false,
+                'constraints' => array(
+                    new Assert\Length(array(
+                        'max' => $this->config['stext_len'],
+                    )),
+                ),
+            ))
             ->add('zip', 'zip')
             ->add('address', 'address')
             ->add('tel', 'tel', array(
