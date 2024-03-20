@@ -60,6 +60,15 @@ class CustomerType extends AbstractType
                     ))
                 ),
             ))
+            ->add('department', 'text', array(
+                'label' => '部署名',
+                'required' => false,
+                'constraints' => array(
+                    new Assert\Length(array(
+                        'max' => $config['stext_len'],
+                    ))
+                ),
+            ))
             ->add('zip', 'zip', array(
                 'required' => true,
             ))
